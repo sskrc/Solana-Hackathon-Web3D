@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" width="1600" height="520">
+  <title>NEON SKYFALL</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#07061a"/>
+      <stop offset="1" stop-color="#1b0c2e"/>
+    </linearGradient>
+    <linearGradient id="word2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5ff3ff"/>
+      <stop offset="1" stop-color="#ff4fd8"/>
+    </linearGradient>
+    <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".55" stop-color="#e6f2ff"/>
+      <stop offset=".56" stop-color="#9fb2d6"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+    <filter id="tglow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="520" rx="36" fill="url(#bg)"/>
+  <g transform="translate(60 40) scale(0.85938)">
+  
+  <defs>
+    <linearGradient id="m-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b0820"/>
+      <stop offset=".55" stop-color="#3a1450"/>
+      <stop offset="1" stop-color="#ff6a5a"/>
+    </linearGradient>
+    <linearGradient id="m-sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe27a"/>
+      <stop offset=".5" stop-color="#ff7a59"/>
+      <stop offset="1" stop-color="#ff2f8e"/>
+    </linearGradient>
+    <linearGradient id="m-hull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#b9c6da"/>
+    </linearGradient>
+    <linearGradient id="m-ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5ff3ff"/>
+      <stop offset="1" stop-color="#ff4fd8"/>
+    </linearGradient>
+    <linearGradient id="m-trail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5ff3ff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#9ffcff"/>
+    </linearGradient>
+    <clipPath id="m-disc"><circle cx="256" cy="256" r="206"/></clipPath>
+    <mask id="m-stripes">
+      <rect width="512" height="512" fill="#fff"/>
+      <g fill="#000">
+        <rect x="0" y="262" width="512" height="5"/>
+        <rect x="0" y="280" width="512" height="7"/>
+        <rect x="0" y="300" width="512" height="9"/>
+        <rect x="0" y="322" width="512" height="11"/>
+      </g>
+    </mask>
+    <filter id="m-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="m-softglow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+  </defs>
+
+  <!-- badge background -->
+  <circle cx="256" cy="256" r="232" fill="#06060f"/>
+  <g clip-path="url(#m-disc)">
+    <rect width="512" height="512" fill="url(#m-sky)"/>
+    <!-- stars -->
+    <g fill="#fff" opacity=".8">
+      <circle cx="140" cy="120" r="1.6"/><circle cx="190" cy="88" r="1.2"/><circle cx="330" cy="104" r="1.4"/>
+      <circle cx="372" cy="150" r="1.1"/><circle cx="118" cy="190" r="1.2"/><circle cx="250" cy="70" r="1.5"/>
+      <circle cx="400" cy="210" r="1.3"/><circle cx="96" cy="150" r="1"/>
+    </g>
+    <!-- sun -->
+    <circle cx="256" cy="300" r="120" fill="#ff5a8a" opacity=".55" filter="url(#m-softglow)"/>
+    <circle cx="256" cy="300" r="104" fill="url(#m-sun)" mask="url(#m-stripes)"/>
+    <!-- low-poly mountains -->
+    <path d="M40 360 L110 300 L150 330 L205 268 L250 322 L300 286 L350 336 L400 292 L472 360 L472 470 L40 470 Z" fill="#2a1438"/>
+    <path d="M205 268 L250 322 L225 330 Z M400 292 L472 360 L420 340 Z M110 300 L150 330 L120 334 Z" fill="#45204f"/>
+    <path d="M40 380 L130 336 L190 372 L262 330 L330 374 L410 342 L472 384 L472 470 L40 470 Z" fill="#150a22"/>
+    <!-- neon horizon line -->
+    <rect x="40" y="384" width="432" height="3" fill="#5ff3ff" filter="url(#m-glow)" opacity=".9"/>
+    <!-- grid -->
+    <g stroke="#ff4fd8" stroke-width="1.5" opacity=".55">
+      <line x1="40" y1="410" x2="472" y2="410"/><line x1="40" y1="440" x2="472" y2="440"/>
+      <line x1="256" y1="387" x2="256" y2="470"/><line x1="210" y1="387" x2="140" y2="470"/><line x1="302" y1="387" x2="372" y2="470"/>
+      <line x1="164" y1="387" x2="40" y2="460"/><line x1="348" y1="387" x2="472" y2="460"/>
+    </g>
+  </g>
+
+  <!-- fighter with trails, climbing -->
+  <g transform="translate(262 236) rotate(38)">
+    <g filter="url(#m-glow)">
+      <rect x="-12" y="78" width="5" height="150" fill="url(#m-trail)" transform="rotate(180 -9.5 153)"/>
+      <rect x="7" y="78" width="5" height="150" fill="url(#m-trail)" transform="rotate(180 9.5 153)"/>
+    </g>
+    <path d="M0 -112 L11 -66 L15 -24 L92 28 L94 44 L17 33 L15 52 L38 72 L38 84 L9 77 L0 86 L-9 77 L-38 84 L-38 72 L-15 52 L-17 33 L-94 44 L-92 28 L-15 -24 L-11 -66 Z"
+          fill="url(#m-hull)" stroke="#06060f" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M15 -24 L92 28 L94 44 L17 33 Z" fill="#9aa8be"/>
+    <path d="M-15 -24 L-92 28 L-94 44 L-17 33 Z" fill="#dfe6f2"/>
+    <ellipse cx="0" cy="-44" rx="6" ry="17" fill="#0d2a55" stroke="#5ff3ff" stroke-width="2"/>
+    <g fill="#5ff3ff" filter="url(#m-glow)">
+      <rect x="88" y="27" width="5" height="16"/><rect x="-93" y="27" width="5" height="16"/>
+      <circle cx="-7" cy="84" r="5"/><circle cx="7" cy="84" r="5"/>
+    </g>
+  </g>
+
+  <!-- outer ring -->
+  <circle cx="256" cy="256" r="216" fill="none" stroke="url(#m-ring)" stroke-width="8" filter="url(#m-glow)"/>
+  <circle cx="256" cy="256" r="232" fill="none" stroke="#5ff3ff" stroke-width="2" opacity=".5"/>
+  <g stroke="#5ff3ff" stroke-width="4" stroke-linecap="round" opacity=".9">
+    <line x1="256" y1="18" x2="256" y2="34"/><line x1="256" y1="478" x2="256" y2="494"/>
+    <line x1="18" y1="256" x2="34" y2="256"/><line x1="478" y1="256" x2="494" y2="256"/>
+  </g>
+</g>
+  <g font-family="Orbitron, 'Eurostile', 'Arial Black', 'Segoe UI', sans-serif" font-weight="900">
+    <text x="560" y="250" font-size="150" letter-spacing="14" fill="url(#chrome)" filter="url(#tglow)">NEON</text>
+    <text x="560" y="390" font-size="150" letter-spacing="14" fill="url(#word2)" filter="url(#tglow)">SKYFALL</text>
+  </g>
+  <rect x="566" y="420" width="960" height="3" fill="url(#word2)" opacity=".8"/>
+  <text x="566" y="470" font-family="'Noto Sans JP', 'Yu Gothic', 'Meiryo', sans-serif" font-weight="700" font-size="34" letter-spacing="26" fill="#ffc6ec">空域制圧戦</text>
+  <text x="1526" y="470" text-anchor="end" font-family="Orbitron, 'Segoe UI', sans-serif" font-size="20" letter-spacing="6" fill="#5ff3ff" opacity=".75">BROWSER 3D FLIGHT SHOOTER</text>
+</svg>
